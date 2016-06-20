@@ -26,11 +26,6 @@ BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools
 %endif
 Requires:	python-modules
-Requires:	python-oauthlib >= 0.3.8
-Requires:	python-openid >= 2.2
-Requires:	python-requests >= 1.1.0
-Requires:	python-requests-oauthlib >= 0.3.0
-Requires:	python-six >= 1.2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,12 +41,6 @@ And to bring support for more frameworks and ORMs.
 %package -n python3-%{module}
 Summary:	Social auth made simple
 Group:		Development/Libraries
-Requires:	python3-oauthlib >= 0.3.8
-Requires:	python3-openid >= 3.0.1
-Requires:	python3-requests >= 1.1.0
-Requires:	python3-requests-oauthlib >= 0.3.0
-Requires:	python3-six >= 1.2.0
-Provides:	%{name} = %{version}-%{release}
 
 %description -n python3-%{module}
 Python Social Auth is an easy to setup social
@@ -65,7 +54,6 @@ And to bring support for more frameworks and ORMs.
 %package doc
 Summary:	Documentation for Python Social Auth
 Group:		Documentation
-Requires:	%{name} = %{version}-%{release}
 
 %description doc
 This package contains the documentation for %{name}.
