@@ -3,13 +3,13 @@
 %bcond_without	doc	# don't build doc
 %bcond_with	tests	# do not perform "make test"
 %bcond_without	python2 # CPython 2.x module
-%bcond_without	python3 # CPython 3.x module
+%bcond_with	python3 # CPython 3.x module
 
 %define 	module	social-auth
 Summary:	Social auth made simple
 Name:		python-%{module}
 Version:	0.2.19
-Release:	1
+Release:	2
 License:	BSD
 Group:		Development/Libraries
 Source0:	https://pypi.python.org/packages/72/4c/5fb6c9157eb059e662beafbc73c84030741ea30eaaa643ca1cb8b58f1bdc/%{name}-%{version}.tar.gz
