@@ -5,15 +5,17 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_with	python3 # CPython 3.x module
 
-%define 	module	social-auth
+%define		module		social
+%define		pypi_name	python-social-auth
+%define		egg_name	python_social_auth
 Summary:	Social auth made simple
-Name:		python-%{module}
-Version:	0.2.19
-Release:	2
+Name:		python-social-auth
+Version:	0.2.21
+Release:	1
 License:	BSD
 Group:		Development/Libraries
-Source0:	https://pypi.python.org/packages/72/4c/5fb6c9157eb059e662beafbc73c84030741ea30eaaa643ca1cb8b58f1bdc/%{name}-%{version}.tar.gz
-# Source0-md5:	65b9c0b77ca2870b5dc586a0c65a0eba
+Source0:	https://files.pythonhosted.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+# Source0-md5:	2bb1857ed7eca771edaa05471b8a3905
 URL:		http://psa.matiasaguirre.net/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -38,11 +40,11 @@ Crafted using base code from django-social-auth, implements a common
 interface to define new authentication providers from third parties.
 And to bring support for more frameworks and ORMs.
 
-%package -n python3-%{module}
+%package -n python3-social-auth
 Summary:	Social auth made simple
 Group:		Development/Libraries
 
-%description -n python3-%{module}
+%description -n python3-social-auth
 Python Social Auth is an easy to setup social
 authentication/registration mechanism with support for several
 frameworks and auth providers.
@@ -103,16 +105,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.rst LICENSE
-%{py_sitescriptdir}/social
-%{py_sitescriptdir}/python_social_auth-%{version}-py2.*.egg-info
+%{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{egg_name}-%{version}-py2.*.egg-info
 %endif
 
 %if %{with python3}
-%files -n python3-%{module}
+%files -n python3-social-auth
 %defattr(644,root,root,755)
 %doc README.rst LICENSE
-%{py3_sitescriptdir}/social
-%{py3_sitescriptdir}/python_social_auth-%{version}-py3.*.egg-info
+%{py3_sitescriptdir}/%{module}
+%{py3_sitescriptdir}/%{egg_name}-%{version}-py3.*.egg-info
 %endif
 
 %files doc
