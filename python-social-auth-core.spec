@@ -19,11 +19,15 @@ URL:		http://python-social-auth-docs.readthedocs.io/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
+BuildRequires:	python-mock = 1.0.1
 BuildRequires:	python-modules
+BuildRequires:	python-saml >= 2.2.1
 BuildRequires:	python-setuptools
 %endif
 %if %{with python3}
+BuildRequires:	python3-mock = 1.0.1
 BuildRequires:	python3-modules
+BuildRequires:	python3-saml >= 2.2.1
 BuildRequires:	python3-setuptools
 %endif
 Requires:	python-modules
