@@ -13,7 +13,7 @@ Name:		python-%{pypi_name}
 Version:	1.2.0
 Release:	1
 License:	BSD
-Group:		Development/Libraries
+Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/s/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 # Source0-md5:	d12b7c872f03d477dcca90c8e14f2844
 URL:		http://python-social-auth-docs.readthedocs.io/
@@ -42,8 +42,8 @@ to third parties services, implement integrations with web frameworks
 and storage solutions.
 
 %package -n python3-%{pypi_name}
-Summary:	Social auth made simple
-Group:		Development/Libraries
+Summary:	Python Social Auth - Core
+Group:		Libraries/Python
 
 %description -n python3-%{pypi_name}
 Python Social Auth is an easy to setup social
