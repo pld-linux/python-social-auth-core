@@ -41,11 +41,11 @@ implements the common interface to define new authentication backends
 to third parties services, implement integrations with web frameworks
 and storage solutions.
 
-%package -n python3-social-auth-core
+%package -n python3-%{pypi_name}
 Summary:	Social auth made simple
 Group:		Development/Libraries
 
-%description -n python3-social-auth-core
+%description -n python3-%{pypi_name}
 Python Social Auth is an easy to setup social
 authentication/registration mechanism with support for several
 frameworks and auth providers.
@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %endif
 
 %if %{with python3}
-%files -n python3-social-auth-core
+%files -n python3-%{pypi_name}
 %defattr(644,root,root,755)
 %doc README.md LICENSE
 %{py3_sitescriptdir}/%{module}
