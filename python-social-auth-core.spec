@@ -9,26 +9,30 @@
 %define		egg_name	social_auth_core
 Summary:	Python Social Auth - Core
 Name:		python-%{pypi_name}
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/s/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
-# Source0-md5:	d12b7c872f03d477dcca90c8e14f2844
-URL:		http://python-social-auth-docs.readthedocs.io/
+# Source0-md5:	7adc1a6f92a7847c09692b2ecb831891
+URL:		https://python-social-auth-docs.readthedocs.io/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with python2}
-BuildRequires:	python-mock = 1.0.1
 BuildRequires:	python-modules
-BuildRequires:	python-saml >= 2.2.1
 BuildRequires:	python-setuptools
+%if %{with tests}
+BuildRequires:	python-mock = 1.0.1
+BuildRequires:	python-saml >= 2.2.1
+%endif
 %endif
 %if %{with python3}
-BuildRequires:	python3-mock = 1.0.1
 BuildRequires:	python3-modules
-BuildRequires:	python3-saml >= 2.2.1
 BuildRequires:	python3-setuptools
+%if %{with tests}
+BuildRequires:	python3-mock = 1.0.1
+BuildRequires:	python3-saml >= 2.2.1
+%endif
 %endif
 Requires:	python-modules
 BuildArch:	noarch
