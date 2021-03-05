@@ -10,7 +10,7 @@
 Summary:	Python Social Auth - Core
 Name:		python-%{pypi_name}
 Version:	1.3.0
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/s/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
